@@ -7,9 +7,10 @@ player1= createPlayer(4,0,[255,0,0]);
 player2=createPlayer(4,8,[0,0,255]);
 }
 function draw(){
+    
     background(220);
     drawBoard();
     drawPlayers();
     reset();
-
+   
 }
