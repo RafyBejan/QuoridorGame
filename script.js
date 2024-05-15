@@ -16,4 +16,9 @@ function draw(){
     background(220);
     drawBoard();
     drawPlayers();
+   
+
+    
+    
+   
 }
