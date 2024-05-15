@@ -8,7 +8,7 @@ player2=createPlayer(4,8,[0,0,255]);
 mousePressed();
 movePlayer();
 
-reset();
+
 
 }
 function draw(){
