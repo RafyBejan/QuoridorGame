@@ -14,9 +14,12 @@ function drawPlayers(){
     fill(player2.color);
     ellipse(player2.x * cellSize + cellSize / 2,player2.y*cellSize+cellSize / 2,cellSize / 2);
 }
+
+  
+
 function reset(){
-    countDown=10;
-    computerNumber=Math.floor((Math.random()*501)+1);
+    player1 = createPlayer(4, 0, [255, 0, 0]);
+    player2 = createPlayer(4, 8, [0, 0, 255]);
 }
-const resetButton=document.getElementyById('reset-button');
+const resetButton=document.getElementById('reset-button');
 resetButton.addEventListener('click',reset);
