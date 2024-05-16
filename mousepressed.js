@@ -1,6 +1,6 @@
-function mousePressed() {
+function mousePressed() {   //functia e predefinita in p5
     let clickedColumn = floor(mouseX / cellSize);
-    let clickedRow = floor(mouseY / cellSize);
+    let clickedRow = floor(mouseY / cellSize); //floor() - returneaza numere intregi
 
     if (clickedColumn === player1.x && clickedRow === player1.y - 1) {
         movePlayer(player1, "up");
