@@ -1,5 +1,5 @@
 function setup(){
-let canvas = createCanvas (600, 600);
+    let canvas = createCanvas (600, 600);
 canvas.parent('game-board');
 canvas.center();
 cellSize = width / boardSize;
