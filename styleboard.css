@@ -1,6 +1,42 @@
-#game-board{
+body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-} 
+    background-color: #f0f0f0;
+}
+
+#game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    border: 5px solid #000;
+    background-color: #f0f0f0;
+}
+
+#button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reset-button, .player-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
