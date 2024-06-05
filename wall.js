@@ -6,8 +6,7 @@ let player2Walls = 10; // Numărul de ziduri pentru jucătorul 2
 // Lista de ziduri
 
 class Wall {
-    constructor(x, y, horizontal) { // Constructor pentru obiectul zid
-        // Coordonatele colțului stâng-sus al zidului
+    constructor(x, y, horizontal) {
         this.x = x;
         this.y = y;
         this.horizontal = horizontal;
