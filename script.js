@@ -1,6 +1,5 @@
 function setup(){
     let canvas = createCanvas (600, 600);
- // Plasarea canvas-ului în div-ul cu id-ul 'game-board
 canvas.parent('game-board');
            //canvas.center();
 // Calcularea dimensiunii unei celule pe baza lățimii canvas-ului și numărului de celule pe tabla de joc
@@ -10,16 +9,20 @@ board = createBoard();
 player1= createPlayer(4,0,[255,0,0]);
 // Inițializarea jucătorului 2 în poziția (4, 8) cu culoarea albastră
 player2=createPlayer(4,8,[0,0,255]);
-//mousePressed();
-movePlayer();
+//mousePressed();(e predefinita si nu e obligatoriu sa fie definita in setup )
+currentPlayer = player1;
+mousePressed = handleMousePressed;
+
+
+
 
 }
 function draw(){
     
     background(220);
-
     drawBoard();
     drawPlayers(); 
+    //drawWalls();
     
     
 

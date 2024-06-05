@@ -27,6 +27,6 @@ function drawPlayers(){
 function reset(){  // reset la locul initial
     player1 = createPlayer(4, 0, [255, 0, 0]);
     player2 = createPlayer(4, 8, [0, 0, 255]);
-
 }
+
     
