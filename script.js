@@ -17,16 +17,18 @@ mousePressed = handleMousePressed;
 
 
 }
-function draw(){
-    
+function draw() {
     background(220);
     drawBoard();
-    drawPlayers(); 
-    //drawWalls();
-    
-    
+    drawPlayers();
+    drawWalls(); // Apelează funcția pentru a desena zidurile
+    // Alte operații de desenare sau actualizare a ecranului...
+}
+function mousePressed() {
+    handleMousePressed();
+}
 
-   
 
-    
+function activateWallPlacement() {
+    placingWall = true; // Setăm variabila placingWall la true pentru a activa modul de plasare a zidurilor
 }

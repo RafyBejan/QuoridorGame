@@ -1,19 +1,24 @@
 function handleMousePressed() {
-    let clickedColumn = floor(mouseX / cellSize);
-    let clickedRow = floor(mouseY / cellSize);
+    if (placingWall) { // Verificăm dacă jucătorul este în modul de plasare a zidurilor
+        AreMousePressed(); // Apelăm funcția corespunzătoare pentru plasarea zidurilor
+    } else {
+        // Verificăm dacă jucătorul este în modul de mutare a jucătorilor și aplicăm logica corespunzătoare
+        let clickedColumn = floor(mouseX / cellSize);
+        let clickedRow = floor(mouseY / cellSize);
 
-    if (currentPlayer === player1) {
-        if (isValidMove(player1, player2, clickedColumn, clickedRow)) {
-            movePlayer(player1, player2, clickedColumn, clickedRow);
-            currentPlayer = player2; // Switch turn to player 2
-        }
-    } else if (currentPlayer === player2) {
-        if (isValidMove(player2, player1, clickedColumn, clickedRow)) {
-            movePlayer(player2, player1, clickedColumn, clickedRow);
-            currentPlayer = player1; // Switch turn to player 1
+        if (currentPlayer === player1) {
+            if (isValidMove(player1, player2, clickedColumn, clickedRow)) {
+                movePlayer(player1, player2, clickedColumn, clickedRow);
+                currentPlayer = player2; // Schimbăm rândul la jucătorul 2
+            }
+        } else if (currentPlayer === player2) {
+            if (isValidMove(player2, player1, clickedColumn, clickedRow)) {
+                movePlayer(player2, player1, clickedColumn, clickedRow);
+                currentPlayer = player1; // Schimbăm rândul la jucătorul 1
+            }
         }
     }
-}
+    }
 
 function isValidMove(player, otherPlayer, clickedColumn, clickedRow) {
     // Check if the clicked cell is adjacent to the player's current position
